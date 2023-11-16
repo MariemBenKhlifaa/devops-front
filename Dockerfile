@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run build
 
-
+EXPOSE 4200
 
 # Utilisation d'une image nginx pour servir l'application Angular
 FROM nginx:latest
@@ -19,7 +19,7 @@ FROM nginx:latest
 COPY --from=build /app/dist/* /usr/share/nginx/html/
 
 # Exposer le port 80
-EXPOSE 4200
+EXPOSE 80
 
 # Commande pour démarrer nginx
 CMD ["nginx", "-g", "daemon off;"]
