@@ -16,6 +16,6 @@ RUN ng build
 # Étape d'exécution (runtime)
 FROM nginx
 COPY --from=build /app/dist/sofrecom-project /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 4202
 
 # Aucun besoin de CMD car l'image nginx par défaut exécute déjà nginx
