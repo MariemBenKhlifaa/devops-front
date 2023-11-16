@@ -1,0 +1,4 @@
+.side-menu__scroll {
+    height: 100%; /* Ajustez la valeur 100px selon vos besoins */
+    overflow-y: auto;
+}

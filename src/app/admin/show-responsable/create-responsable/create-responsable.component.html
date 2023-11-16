@@ -1,0 +1,55 @@
+
+<!-- Button trigger modal
+
+
+
+<div class="modal" [class]="openModel ? 'open' : ''" [style]="{width: '500px'}" [draggable]="true">
+
+</div>
+Modal -->
+<!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div id="basic-modal-preview-resp" class="modal" tabindex="-1" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <!-- BEGIN: Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="close" data-tw-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div> <!-- END: Modal Header -->
+            <!-- BEGIN: Modal Body -->
+            <div class="intro-y box">
+
+              <div id="input" class="p-5">
+                <form #myForm="ngForm" (ngSubmit)="addOperateur(operateur)">
+                  <div class="preview">
+                    <div>
+                      <label for="regular-form-1" class="form-label">NOM</label>
+                      <input id="regular-form-1" type="text" class="form-control form-control-rounded" placeholder="Nom" name="nom" [(ngModel)]="operateur.nom" required>
+                    </div>
+                    <div class="mt-3">
+                      <label for="regular-form-2" class="form-label">PRENOM</label>
+                      <input id="regular-form-2" type="text" class="form-control form-control-rounded" placeholder="Prenom" name="prenom" [(ngModel)]="operateur.prenom" required>
+                    </div>
+                    <div class="mt-3">
+                      <label for="regular-form-3" class="form-label">Password</label>
+                      <input id="regular-form-3" type="password" class="form-control form-control-rounded" placeholder="Nom@gmail.com" name="password" [(ngModel)]="operateur.password" required>
+                    </div>
+                  </div>
+                  <br>
+                  <div class="mt-3">
+                    <button type="submit" class="btn btn-primary w-20" data-tw-dismiss="modal">Send</button>&nbsp; &nbsp;
+
+                  </div>
+
+                </form>
+
+            </div>
+          </div><!-- END: Modal Body -->
+            <!-- BEGIN: Modal Footer -->
+        </div>
+    </div>
+</div> <!-- END: Modal Content -->
